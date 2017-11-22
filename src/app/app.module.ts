@@ -8,13 +8,15 @@ import { AboutComponent } from './about/about.component';
 import { PeopleComponent } from './people/people.component';
 import { PeopleService } from './service/people.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     AboutComponent,
-    PeopleComponent
+    PeopleComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
