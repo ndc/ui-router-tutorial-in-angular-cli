@@ -44,6 +44,19 @@ const rootModule: RootModule = {
       ]
     }
   ],
+  config: (router, injector, states) => {
+    let svc = injector.get(PeopleService);
+    router.transitionService.onStart(
+      {
+        to: state => {
+          let match = state.name == "hello";
+          return match;
+        }
+      },
+      transition => {
+        let peep = svc.GetPeople();
+      });
+  },
   useHash: true,
   otherwise: "/hello"
 };
